@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.netology.MovieManager;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class MovieManagerTest {
@@ -8,20 +9,21 @@ class MovieManagerTest {
     void shouldFindAllWnenManagerIsEmpty() {
         MovieManager manager = new MovieManager();
 
-        String[]actual = manager.findAll();
+        String[] actual = manager.findAll();
 
-        String[] expected = {} ;
+        String[] expected = {};
 
         assertArrayEquals(expected, actual);
 
     }
+
     @Test
     void shouldFindAllMoviesInAddingOrder() {
         MovieManager manager = new MovieManager();
 
-      manager.add("Бладшот");
-      manager.add("Вперед");
-      manager.add("Отель 'Белград'");
+        manager.add("Бладшот");
+        manager.add("Вперед");
+        manager.add("Отель 'Белград'");
 
         String[] actual = manager.findAll();
         String[] expected = {
@@ -32,6 +34,7 @@ class MovieManagerTest {
         assertArrayEquals(expected, actual);
 
     }
+
     @Test
     void shouldFindLastMovies() {
         MovieManager manager = new MovieManager();
